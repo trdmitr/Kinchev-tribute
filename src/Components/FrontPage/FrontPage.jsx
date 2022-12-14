@@ -7,7 +7,7 @@ import Img from '../Img'
 
 const FrontPage = () => {
     const navigate = useNavigate();
-  const imgUrl = "https://sun9-86.userapi.com/impg/kHPddrPRQ_-sEHyq9aynQWRmU1EaQNx4HIDO2g/9Hj53TPJW34.jpg?size=1999x2160&quality=95&sign=e89b27e1119dec086e759f57a67cd375&type=album"
+  const imgUrl = "https://sun9-51.userapi.com/impg/hMWo0MPYuPRLLssF8H-oPn6IMnvVbCiMH79cvA/5eLbq9Jv-FM.jpg?size=480x374&quality=96&sign=adf0eff84408a3a606fa131ec1a7265d&type=album"
   const imgAlt = "Каверы Подземки"
 
 return (
@@ -17,14 +17,14 @@ return (
         <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
         {/* <PlayButton  onClick={() => navigate("/playlist")}></PlayButton> */}
         <div className={classes.front_header}>
-                    <p>🎸🎸🎸🎧🎧🎸🎸🎸</p>
+                    <p>🖤❤АлиСа❤🖤</p>
                 </div>
                 <div className={classes.front_media}>
                   <Img imgUrl = {imgUrl} imgAlt={imgAlt}/>
                     {/* <img src={imUrl} width={80} alt="Каверы Подземки" /> */}
                 </div>
                 <div className={classes.front_body}>
-                    <span>Я увидел тебя и подумал: Как редко встречаешь своих... </span>
+                    <span>Навет — не помеха, покуда есть Вера! Стена — не преграда для тех, кто в пути. И окрик — не сила, и выстрел — не мера, Когда тебе солнце шепнуло: "Лети! </span>
                 </div>
       </div>
     </div>
