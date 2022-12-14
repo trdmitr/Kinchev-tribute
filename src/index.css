@@ -1,0 +1,64 @@
+/* @import url('https://fonts.cdnfonts.com/css/cassandra-personal-use'); */
+@font-face {
+	font-family: "Cassandra";
+	src: url(./fonts/cassandra/cassandra.eot);
+	src: url("./fonts/cassandra/cassandra.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("./fonts/cassandra/cassandra.otf") format("opentype"), /* Open Type Font */
+		url("./fonts/cassandra/cassandra.svg") format("svg"), /* Legacy iOS */
+		url("./fonts/cassandra/cassandra.ttf") format("truetype"), /* Safari, Android, iOS */
+		url("./fonts/cassandra/cassandra.woff") format("woff"), /* Modern Browsers */
+		url("./fonts/cassandra/cassandra.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+  margin: 0;
+  font-family: "Cassandra", sans-serif;
+                                                
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+;
+* {
+  padding: 0;
+  /* margin: 0; */
+  /* box-sizing: border-box; */
+}
+
+body {
+  background-color: #151616;
+}
+:root {
+  --colorBackgroundAll: #797539B8;
+  --colorHeader: #3B643B;
+  --colorText: rgb(173, 19, 19);
+  --tributeAfterBefore: hsl(0, 0%, 70%);
+  --titleSongColor: #7FC8EC;
+
+  --textShadow: 0px 1px 0px #fafafa;
+  --backGround: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e2e2e2));
+  --backGRound: -moz-linear-gradient(top, #eee, #e2e2e2);
+  --boxShadow: inset 1px 1px 0 #f5f5f5;
+
+
+  --searchBackground: #18191f;
+  --searchText: #ffffff;
+  --searchPlaceHolder: #575a77;
+  --playerBackground: #18191f;
+  
+  --timeColor: #ffffff;
+  --progressSlider: #9440f3;
+  --progressUsed: #ffffff;
+  --progressLeft: #151616;
+  --volumeSlider: #9440f3;
+  --volumeUsed: #ffffff;
+  --volumeLeft:  #151616;
+  --playlistBackground: #18191f;
+  --playlistText: #575a77;
+  --playlistBackgroundHoverActive:  #18191f;
+  --playlistTextHoverActive: #ffffff;
+}
