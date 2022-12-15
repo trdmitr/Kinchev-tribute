@@ -37,7 +37,7 @@ body {
   --colorHeader: #3B643B;
   --colorText: rgb(15, 14, 14);
   --tributeAfterBefore: hsl(0, 78%, 65%);
-  --titleSongColor: white;
+  --titleSongColor: rgb(243, 231, 231);
 
   --textShadow: 0px 1px 0px #fafafa;
   --backGround: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e2e2e2));

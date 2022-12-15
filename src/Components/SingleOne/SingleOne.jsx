@@ -39,7 +39,7 @@ const SingleOne = ({ songs }) => {
           <audio controls className={currSing.audio3 ? '' : classes.mediaHidden}
             source src={currSing.audio3} type="audio/mpeg" />
         </div>
-        <div className={classes.tziTata}>
+        <div className={[classes.tziTata, currSing.picture_tzitata ? null : classes.mediaHidden].join(' ') }>
           <img className={classes.tziImage} src={currSing.picture_tzitata} width={80} alt="Цитаты" />
         </div>
         <div className={[
