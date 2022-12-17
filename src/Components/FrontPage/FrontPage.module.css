@@ -4,7 +4,7 @@
   height: 61rem;
   overflow-y: scroll;
   scrollbar-width: none;
-  background-color: #d6dfd0;
+  background-color: #cf6969;
   background-image: var(--allBackGround);
   background-attachment: fixed;
   background-size: cover;
@@ -57,6 +57,7 @@
   border-radius: 0.5em;
   object-fit: cover;
   vertical-align: middle;
+  
 }
 
 .front_media img {
@@ -66,6 +67,7 @@
   padding: 1.5em;
   height: 117%;
   width: auto;
+  padding: 0em;
   /* transform: translate(10px, 10px); */
 }
 
@@ -85,11 +87,27 @@
   background-image: var(--allBackGround);
   background-attachment: fixed;
   background-size: cover;
-  font-size: 3em;
+  font-size: 1.9em;
   text-align: center;
   border-radius: 1em;
   box-shadow: inset 19px -19px 38px #b93d3d, inset -19px 19px 38px #e2c8c8;
   margin-top: 1.5em;
+  /* mix-blend-mode: screen; */
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 1em, #b93d3d 1em, #f72417 50%), repeating-linear-gradient(45deg, #f72417, #f72417 1em, #FFF 1em, hwb(0deg 55% 5%) 50%);
+    background-size: 3em 3em, 2em 2em;
+    animation-name: ani;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   /* text-shadow: var(--textShadow); */
   /* box-shadow: var(--boxShadow); */
+}
+@keyframes ani {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: 100% 0;
+  }
 }
