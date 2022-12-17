@@ -27,7 +27,7 @@ useEffect(() => {
   fetchSongs()
 
 }, [])
-  const urlParse =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxL55RFLI0kryFFe90U2qnDF80CCmSyRhcZuRSlSKcMwfpjlNuf9lCUHhrpk8z09P3CtebSTaUvS7f/pub?output=csv";
+  // const urlParse =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxL55RFLI0kryFFe90U2qnDF80CCmSyRhcZuRSlSKcMwfpjlNuf9lCUHhrpk8z09P3CtebSTaUvS7f/pub?output=csv";
 
 // async function fetchSongs () {
 //  const results = await SheetServce.getCavers();
@@ -38,25 +38,25 @@ useEffect(() => {
 //   fetchSongs()
 
 // }, [])
-useEffect (() => {
-  if (!data) return
-  Papa.parse(urlParse,
-     {
-      download: true,
-      header: true,
-      complete: (results) => {
-        setData(results.data)
-      },
-      skipEmptyLines: true,
-      error: (error) => {
-        console.error(error);
-        setSongError(error)
-    }
-    })
-    }, [])
+// useEffect (() => {
+//   if (!data) return
+//   Papa.parse(urlParse,
+//      {
+//       download: true,
+//       header: true,
+//       complete: (results) => {
+//         setData(results.data)
+//       },
+//       skipEmptyLines: true,
+//       error: (error) => {
+//         console.error(error);
+//         setSongError(error)
+//     }
+//     })
+//     }, [])
 
     // console.log("data", data)
-    const tributes = Array.from(data);
+    const tributes = Array.from(songs);
     // console.log("songError", songError)
     console.log("tributes ", tributes)
        return (
