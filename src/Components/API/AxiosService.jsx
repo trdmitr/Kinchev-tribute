@@ -9,7 +9,7 @@ export default class AxiosServise {
             },
         };
        
-const response = await  axios.get("https://api.jsonbin.io/v3/b/634d91750e6a79321e2bb874", config)
+const response = await  axios.get("https://api.jsonbin.io/v3/b/639c448d01a72b59f2321459", config)
       return response.data 
 }  
 }

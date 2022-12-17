@@ -8,6 +8,7 @@ import AxiosService from './Components/API/AxiosService'
 import {useFetching} from './Components/Hooks/useFetchig'
 import SingleOne from './Components/SingleOne/SingleOne';
 import Papa from "papaparse";
+import SheetServce from './Components/API/SheetServce';
 
 function NotFound() {
   return <h2>Ресурс не найден</h2>;
@@ -16,20 +17,27 @@ function NotFound() {
 function App() {
   const [songs, setSongs] = useState([]);
   const [data, setData] = useState({});
-  const [songError, setSongError] = useState('');
-  // const [fetchSongs, isSongsLoading, songError ] = useFetching (async () => {
-  //   const response = await AxiosService.getCavers();
-  //   setSongs(response.record.cavers)
-  // });
+  const [songErrors, setSongError] = useState('');
+  const [fetchSongs, isSongsLoading, songError ] = useFetching (async () => {
+    const response = await AxiosService.getCavers();
+    setSongs(response.record.cavers)
+  });
 
+useEffect(() => {
+  fetchSongs()
+
+}, [])
+  const urlParse =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxL55RFLI0kryFFe90U2qnDF80CCmSyRhcZuRSlSKcMwfpjlNuf9lCUHhrpk8z09P3CtebSTaUvS7f/pub?output=csv";
+
+// async function fetchSongs () {
+//  const results = await SheetServce.getCavers();
+ 
+//  setData(results.data)
+// }
 // useEffect(() => {
 //   fetchSongs()
 
-
-  const urlParse =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxL55RFLI0kryFFe90U2qnDF80CCmSyRhcZuRSlSKcMwfpjlNuf9lCUHhrpk8z09P3CtebSTaUvS7f/pub?output=csv";
-
 // }, [])
-
 useEffect (() => {
   if (!data) return
   Papa.parse(urlParse,
@@ -46,9 +54,11 @@ useEffect (() => {
     }
     })
     }, [])
+
+    // console.log("data", data)
     const tributes = Array.from(data);
     // console.log("songError", songError)
-    // console.log("tributes ", tributes)
+    console.log("tributes ", tributes)
        return (
        <Fragment>
         <HashRouter>

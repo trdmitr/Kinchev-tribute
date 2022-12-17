@@ -7,7 +7,7 @@ import Img from '../Img'
 
 const FrontPage = () => {
     const navigate = useNavigate();
-  const imgUrl = "https://sun9-51.userapi.com/impg/hMWo0MPYuPRLLssF8H-oPn6IMnvVbCiMH79cvA/5eLbq9Jv-FM.jpg?size=480x374&quality=96&sign=adf0eff84408a3a606fa131ec1a7265d&type=album";
+  const imgUrl = "https://sun9-49.userapi.com/impg/Rz8zVF6IAQNxs9gGyx5baDA542QFvSVPpiPZZQ/faSptv5PM2I.jpg?size=704x753&quality=96&sign=f00690c179a6f45f2dfac4f2cbc32659&type=album";
   const imgAlt = "Каверы Подземки";
   const imgHeader = "https://sun9-84.userapi.com/impg/2RxpmzSpxcdTd0Y9dF0Hv7iNEuH4FGtDZMMGYw/yQhigXEhw2E.jpg?size=359x174&quality=96&sign=554e1fc3819ed0447ed0f1e422a2c963&type=album";
 
@@ -18,8 +18,8 @@ return (
         <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
         {/* <PlayButton  onClick={() => navigate("/playlist")}></PlayButton> */}
         <div className={classes.front_header}>
-        <img src={imgHeader} width={150} alt="Каверы Подземки" />
-                    {/* <p>🖤❤АлиСа❤🖤</p> */}
+        {/* <img src={imgHeader} width={150} alt="Каверы Подземки" /> */}
+                    <p>💥⚡✨✨✨⚡💥</p>
                 </div>
                 <div className={classes.front_media}>
                   <Img imgUrl = {imgUrl} imgAlt={imgAlt}/>
