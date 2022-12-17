@@ -9,8 +9,6 @@ const Player = ({songs}) => {
          container.name = song.name;
          container.src= song.audio1;
          container.aud_name = song.audio_name1;
-        //  container.audio2= song.audio2 || 0;
-        //  container.audio3= song.audio3 || 0;
         return container;
     }
     )
@@ -19,8 +17,6 @@ const Player = ({songs}) => {
          container.name = song.name;
          container.src = song.audio2;
          container.aud_name = song.audio_name2;
-        //  container.audio2= song.audio2 || 0;
-        //  container.audio3= song.audio3 || 0;
         return container;
     }
     )
@@ -29,8 +25,6 @@ const Player = ({songs}) => {
          container.name = song.name;
          container.src = song.audio3;
          container.aud_name = song.audio_name3;
-        //  container.audio2= song.audio2 || 0;
-        //  container.audio3= song.audio3 || 0;
         return container;
     }
     )    
@@ -57,7 +51,6 @@ function mapSongsFields(fields) {
     }
     return isActiveUsers;
 }
-// console.log("mapSongsFields", mapSongsFields(["name","audio1", "audio2", "audio3"]));
 const aud4 = mapSongsFields(["name", "audio1"]);
 const aud5 = mapSongsFields(["name", "audio2"]);
 const aud6 = mapSongsFields(["name", "audio3"]);
