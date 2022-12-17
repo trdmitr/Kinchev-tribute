@@ -59,6 +59,9 @@
   cursor: pointer;
 }
 .headerSong h2 {
+  /* font-family: 'Rubik Gemstones', cursive; */
+  
+  text-shadow: var(--textShadow);
   margin: 0%;
 }
 

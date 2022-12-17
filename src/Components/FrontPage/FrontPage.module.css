@@ -66,6 +66,7 @@
   padding: 1.5em;
   height: 117%;
   width: auto;
+  /* transform: translate(10px, 10px); */
 }
 
 .front_body {
@@ -75,7 +76,7 @@
 }
 
 .front_body span {
-  font-family: "Cassandra";
+  font-family: 'Rubik Gemstones', cursive;
   font-size: 1rem;
   font-weight: normal;
   padding: 0.5em;
@@ -89,6 +90,6 @@
   border-radius: 1em;
   box-shadow: inset 19px -19px 38px #b93d3d, inset -19px 19px 38px #e2c8c8;
   margin-top: 1.5em;
-  text-shadow: var(--textShadow);
+  /* text-shadow: var(--textShadow); */
   /* box-shadow: var(--boxShadow); */
 }

@@ -91,17 +91,20 @@
   }
 
   .col > p {
+    /* font-family: 'Rubik Gemstones', cursive; */
+    
     font-size: 15px;
     font-weight: bold;
     position: relative;
     text-align: center;
-    background-color: hsl(0, 0%, 70%);
+    background-color: hsl(0, 78%, 75%);
+    
     color: var(--colorText);
     top: -9px;
     left: 6px;
     width: 100%;
     border-radius: 0.5em;
-    text-shadow: var(--textShadow);
+    /* text-shadow: var(--textShadow); */
     box-shadow: var(--boxShadow);
   }
 }
@@ -111,7 +114,7 @@
   color: var(--colorText);
   width: 28rem;
   font-size: 3rem;
-  background: hsl(0, 0%, 70%);
+  background: hsl(0, 78%, 75%);
   padding: 15px 20px;
   border: 2px solid var(--colorText);
   border-radius: 8px;

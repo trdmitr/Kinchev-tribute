@@ -1,16 +1,5 @@
 /* @import url('https://fonts.cdnfonts.com/css/cassandra-personal-use'); */
-@font-face {
-	font-family: "Cassandra";
-	src: url(./fonts/cassandra/cassandra.eot);
-	src: url("./fonts/cassandra/cassandra.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-		url("./fonts/cassandra/cassandra.otf") format("opentype"), /* Open Type Font */
-		url("./fonts/cassandra/cassandra.svg") format("svg"), /* Legacy iOS */
-		url("./fonts/cassandra/cassandra.ttf") format("truetype"), /* Safari, Android, iOS */
-		url("./fonts/cassandra/cassandra.woff") format("woff"), /* Modern Browsers */
-		url("./fonts/cassandra/cassandra.woff2") format("woff2"); /* Modern Browsers */
-	font-weight: normal;
-	font-style: normal;
-}
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap'; */
 body {
   margin: 0;
   font-family: "Cassandra", sans-serif;
@@ -37,9 +26,9 @@ body {
   --colorHeader: #3B643B;
   --colorText: rgb(15, 14, 14);
   --tributeAfterBefore: hsl(0, 78%, 65%);
-  --titleSongColor: rgb(243, 231, 231);
+  --titleSongColor: hsl(0, 78%, 75%);
 
-  --textShadow: 0px 1px 0px #fafafa;
+  --textShadow: 0px 1px 0px #0e0606;
   --backGround: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e2e2e2));
   --backGRound: -moz-linear-gradient(top, #eee, #e2e2e2);
   --boxShadow: inset 1px 1px 0px #f5f5f5;
