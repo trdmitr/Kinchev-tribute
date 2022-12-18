@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useParams } from "react-router";
 import classes from './SingleOne.module.css'
 import { useNavigate } from 'react-router-dom'
@@ -7,12 +7,32 @@ import cl from '../UI/Pub.module.css'
 import CaverButton from '../UI/Buttons/CaverButton'
 import IconButtonHome from '../UI/Buttons/IconButtonHome'
 import BackButton from '../UI/Buttons/MyButton';
+// import axios from 'axios'
+
 
 const SingleOne = ({ songs }) => {
+  // const [data, setData] = useState({});
   const navigate = useNavigate();
   const params = useParams();
+  // const fetchPost = async () => {
+    
+  //   const url = `https://api.jsonbin.io/v3/b/639c448d01a72b59f2321459(o, "$..name")]`;
+  //   const config = {
+  //     headers: {
+  //         'X-Access-Key': '$2b$10$uNKdqlNveTZfgBvIJNkSsedScM0e6eJ8wDkF8HSnAQOVtOZFHdDz.'
+  //     }
+  //   }
+  //   const response = await axios.get(url,config );
+  //   setData(response.data.record.cavers)
+  //   // return response.data;
 
-
+  // } 
+    
+  // useEffect(() => {
+  //   fetchPost()
+  
+  // }, [])
+// console.log(data)
   const currSings = useMemo(() => {
     return songs.filter(songs => songs.id == params.id);
 
