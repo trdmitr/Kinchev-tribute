@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { useParams } from "react-router";
 import classes from './SingleOne.module.css'
 import { useNavigate } from 'react-router-dom'

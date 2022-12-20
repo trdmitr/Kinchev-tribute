@@ -1,5 +1,6 @@
 import { useEffect, useState  } from "react"
-import Loader from "./UI/Loader/Loader";
+// import Loader from "./UI/Loader/Loader";
+import RoundLoader from "./UI/Loader/RoundLoader";
 
 const Img = ({imgUrl, imgAlt}) => {
   const [url, setUrl] = useState('');
@@ -13,7 +14,7 @@ const Img = ({imgUrl, imgAlt}) => {
     }, [imgUrl])
   
   if (!url) {
-    return <Loader/>;
+    return <RoundLoader/>;
   }
       
   return <img src = {url} alt={imgAlt}/>;

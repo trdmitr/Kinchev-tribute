@@ -18,7 +18,7 @@
 
 .content h1 {
   margin-left: 10px;
-  color: var(--colorText);
+  color: #FFF;
   text-shadow: var(--textShadow);
 }
 
