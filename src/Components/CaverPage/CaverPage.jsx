@@ -10,8 +10,15 @@ import Loader from '../UI/Loader/Loader'
 import About from '../About'
 import Img from '../Img'
 import Player from '../PlayList/Player'
+import {
+    QueryClient,
+    QueryClientProvider,
+    useQuery
+} from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const CaverPage = ({ songs, songError }) => {
+    const queryClient = new QueryClient()
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
     const singContent = useMemo(() => {
@@ -26,6 +33,7 @@ const CaverPage = ({ songs, songError }) => {
         ))
     }, [songs])
     return (
+        <QueryClientProvider client={queryClient}>
         <div className={cl.tribute_app}>
             <div className={classes.content}>
                 <Modal visible={modal} setVisible={setModal}>
@@ -44,7 +52,8 @@ const CaverPage = ({ songs, songError }) => {
                 </div><Player songs={songs} />
             </div>
         </div>
-
+        <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
     )
 }
 

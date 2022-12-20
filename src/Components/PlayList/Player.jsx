@@ -1,9 +1,41 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState} from "react";
 import classes from './PlayList.module.css'
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import axios from 'axios'
+import {
+    QueryClient,
+    QueryClientProvider,
+    useQuery
+}  from '@tanstack/react-query'
+// const queryClient = new QueryClient();
 const Player = ({songs}) => {
+    const [data, setData] = useState({});
+    const fetchPost =  () => {
+    
+    const url = `https://api.jsonbin.io/v3/b/639c448d01a72b59f2321459`;
+    const config = {
+      headers: {
+          'X-Access-Key': '$2b$10$uNKdqlNveTZfgBvIJNkSsedScM0e6eJ8wDkF8HSnAQOVtOZFHdDz.'
+      }
+    }
+    return fetch(url, config ).then((res) => {
+        const result = res.json();
+        console.log(result);
+       return result;
+      });
+    
+    // setData(response.data.record.cavers)
+    // return response.data.record;
+
+  } 
+  
+  const query = useQuery(['639c448d01a72b59f2321459'], fetchPost, {staleTime: 60000}, {cacheTime: 1000 * 60 * 60}, {refetchOnWindowFocus: false}, {enabled: false}, {retry: 10});
+  console.log("query.data", query)
+//   const cavers = Array.from(songs);
+
+  
     const audiosongs1 = songs.map((song) => {
         const container = {};
          container.name = song.name;
@@ -29,33 +61,50 @@ const Player = ({songs}) => {
     }
     )    
     const audioList =  [...audiosongs1, ...audiosongs2, ...audiosongs3]
- .filter(e => e.src !== '');
+  .filter(e => e.src !== '');
  console.log('audioList ',  audioList);
 
-const mapUsersByFields = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
-    u2[f1] = u1[f1];
-    return u2;
-}, {}));
+// const [loaded, setLoaded] = useState(false)
 
-const aud1 = mapUsersByFields(["name", "audio1"].filter(e => e.audio1 !== ""));
-const aud2 = mapUsersByFields(["name", "audio2"].filter(e => e.audio2 !== ''));
-const aud3 = mapUsersByFields(["name", "audio3"].filter(e => e.audio3 !== ''));
+//  useEffect(() => {
+//     localStorage.setItem("audioList", JSON.stringify(audioList))
 
-function mapSongsFields(fields) {
-    let isActiveUsers = [];
-    for (let fromUser of songs) {
-        let song = {};
-        for (let field of fields)
-            song[field] = fromUser[field];
-        isActiveUsers.push(song);
-    }
-    return isActiveUsers;
-}
-const aud4 = mapSongsFields(["name", "audio1"]);
-const aud5 = mapSongsFields(["name", "audio2"]);
-const aud6 = mapSongsFields(["name", "audio3"]);
- const musicTracks2 = [...aud4, ...aud5, ...aud6].filter(e => e.audio1 !== "" && e.audio2 !== '' && e.audio3 !== '' );
-  console.log ("musicTracks2" , musicTracks2)
+//   }, [audioList]);
+//   const [mp3, setMp3] = useState({});
+//  useEffect(() => {
+//     if (loaded) return ;
+//     setMp3(
+//         JSON.parse(localStorage.getItem("audioList"))
+//     ) 
+//     setLoaded(true)
+//   },[loaded]);
+//    console.log("mp3", mp3)
+  
+  
+// const mapUsersByFields = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
+//     u2[f1] = u1[f1];
+//     return u2;
+// }, {}));
+
+// const aud1 = mapUsersByFields(["name", "audio1"].filter(e => e.audio1 !== ""));
+// const aud2 = mapUsersByFields(["name", "audio2"].filter(e => e.audio2 !== ''));
+// const aud3 = mapUsersByFields(["name", "audio3"].filter(e => e.audio3 !== ''));
+
+// function mapSongsFields(fields) {
+//     let isActiveUsers = [];
+//     for (let fromUser of songs) {
+//         let song = {};
+//         for (let field of fields)
+//             song[field] = fromUser[field];
+//         isActiveUsers.push(song);
+//     }
+//     return isActiveUsers;
+// }
+// const aud4 = mapSongsFields(["name", "audio1"]);
+// const aud5 = mapSongsFields(["name", "audio2"]);
+// const aud6 = mapSongsFields(["name", "audio3"]);
+//  const musicTracks2 = [...aud4, ...aud5, ...aud6].filter(e => e.audio1 !== "" && e.audio2 !== '' && e.audio3 !== '' );
+//   console.log ("musicTracks2" , musicTracks2)
 
   const musicTracks = [
     {

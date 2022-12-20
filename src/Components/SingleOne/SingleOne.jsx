@@ -40,7 +40,7 @@ const SingleOne = ({ songs }) => {
   // console.log("currSings ", currSings)
   const listContent = useMemo(() => {
     return currSings.map((currSing) =>
-      <div className={classes.mediaSong} key={currSing.id}>
+      <div className={classes.mediaSong} key={currSing.id.toString()}>
         <img className={classes.mediaImage} src={currSing.photo} width={80} alt={currSing.name} />
         <div className={classes.headerSong}>
           <h2>{currSing.name}</h2></div>

@@ -58,7 +58,7 @@ useEffect(() => {
 //     })
 //     }, [])
 
-    // console.log("data", data)
+    console.log("songs", songs)
     const tributes = Array.from(songs);
     // console.log("songError", songError)
     console.log("tributes ", tributes)
@@ -67,10 +67,10 @@ useEffect(() => {
         <HashRouter>
            <Routes>
           <Route exact path="/" element={<FrontPage />} />
-          <Route path="/cavers" element={<CaverPage songs = {tributes} songError = {songError}/>} />
+          <Route path="/cavers" element={<CaverPage songs = {songs} songError = {songError}/>} />
           {/* <Route path="/cavers" element={<Cavers isSongsLoading = {isSongsLoading} songs = {songs}/>} /> */}
           
-          <Route path='/cavers/:id' element={<SingleOne songs = {tributes} />} />
+          <Route path='/cavers/:id' element={<SingleOne songs = {songs} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </HashRouter>
