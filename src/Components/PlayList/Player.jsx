@@ -12,7 +12,7 @@ import {
 // const queryClient = new QueryClient();
 const Player = ({songs}) => {
     const [data, setData] = useState({});
-    const fetchPost =  () => {
+    const fetchPost =  async () => {
     
     const url = `https://api.jsonbin.io/v3/b/639c448d01a72b59f2321459`;
     const config = {
@@ -20,11 +20,10 @@ const Player = ({songs}) => {
           'X-Access-Key': '$2b$10$uNKdqlNveTZfgBvIJNkSsedScM0e6eJ8wDkF8HSnAQOVtOZFHdDz.'
       }
     }
-    return fetch(url, config ).then((res) => {
+    const res = await fetch(url, config);
         const result = res.json();
         console.log(result);
-       return result;
-      });
+        return await result;
     
     // setData(response.data.record.cavers)
     // return response.data.record;
