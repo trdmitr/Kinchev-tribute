@@ -37,7 +37,7 @@ const Player = () => {
         return <h1 style={{ backgroundColor: "black" }}>Ошибка загрузки {error.message}</h1>;
 
     const songs = query.record.cavers;
-    console.log("query.data", query)
+    // console.log("query.data", query)
     const audiosongs1 = songs.map((song) => {
         const container = {};
         container.name = song.name;
@@ -64,7 +64,7 @@ const Player = () => {
     )
     const audioList = [...audiosongs1, ...audiosongs2, ...audiosongs3]
         .filter(e => e.src !== '');
-    console.log('audioList ', audioList);
+    // console.log('audioList ', audioList);
 
     // const [loaded, setLoaded] = useState(false)
 

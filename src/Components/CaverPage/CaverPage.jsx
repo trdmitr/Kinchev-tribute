@@ -6,38 +6,17 @@ import CaverButton from '../UI/Buttons/CaverButton'
 import IconButtonHome from '../UI/Buttons/IconButtonHome'
 import PlayButton from '../UI/Buttons/PlayButton'
 import Modal from '../UI/Buttons/Modals/Modals'
-// import Loader from '../UI/Loader/Loader'
 import About from '../About'
-// import Img from '../Img'
 import Player from '../PlayList/Player'
-import { QueryClient, QueryClientProvider} from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+// import { QueryClient, QueryClientProvider} from '@tanstack/react-query';
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import Gocavers from './Gocavers'
 
 const CaverPage = () => {
-    const queryClient = new QueryClient({
-        defaultOptions: {
-            queries: {
-                staleTime: 60 * 60 * 1000, // 60 минут
-                cacheTime: 1000 * 60 * 60 * 24 // 24 часа
-            },
-        },
-    })
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
-    // const singContent = useMemo(() => {
-    //     return songs.map((caver) => (
-    //         <div className={classes.col} key={caver.id.toString()} onClick={() => navigate(`/cavers/${caver.id}`)}>
-    //            <div className={classes.item}>
-    //                 {/* <img src={caver.photo} alt={caver.name} /> */}
-    //                 <Img imgUrl={caver.photo} imgAlt={caver.name} />
-    //             </div>
-    //             <p>{caver.name}</p>
-    //         </div>
-    //     ))
-    // }, [songs])
     return (
-        <QueryClientProvider client={queryClient}>
+        
         <div className={cl.tribute_app}>
             <div className={classes.content}>
                 <Modal visible={modal} setVisible={setModal}>
@@ -57,8 +36,7 @@ const CaverPage = () => {
                 </div><Player/>
             </div>
         </div>
-        <ReactQueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
+      
     )
 }
 

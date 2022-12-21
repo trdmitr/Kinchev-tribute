@@ -1,12 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import classes from './CaverPage.module.css'
-
-import {
-    QueryClient,
-    QueryClientProvider,
-    useQuery
-}  from '@tanstack/react-query'
+import {useQuery}  from '@tanstack/react-query'
 import Img from '../Img';
 import Loader from '../UI/Loader/Loader';
 const fetchPost =   () => {
