@@ -2,7 +2,7 @@
   "name": "kinchev_tribute",
   "version": "0.1.0",
   "private": false,
-  "homepage": "",
+  "homepage": "https://trdmitr.github.io/Kinchev-tribute/",
   "dependencies": {
     "@tanstack/react-query": "^4.20.4",
     "@tanstack/react-query-devtools": "^4.20.4",
