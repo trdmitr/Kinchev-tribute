@@ -87,7 +87,7 @@ function App() {
         </Routes>
       </HashRouter>
     </Fragment>
-    <ReactQueryDevtools initialIsOpen={false} />
+    
     </QueryClientProvider>
     
 

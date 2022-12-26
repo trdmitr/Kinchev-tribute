@@ -12,7 +12,7 @@ const Player = () => {
     const [trackIndex, setTrackIndex] = useState(0);
     const fetchPost = () => {
 
-        const url = `https://api.jsonbin.io/v3/b/639c448d01a72b59f2321459`;
+        const url = `https://api.jsonbin.io/v3/b/63a3fbd5dfc68e59d56e6428`;
         const config = {
             headers: {
                 'X-Access-Key': '$2b$10$uNKdqlNveTZfgBvIJNkSsedScM0e6eJ8wDkF8HSnAQOVtOZFHdDz.'
@@ -20,7 +20,7 @@ const Player = () => {
         }
         return fetch(url, config).then((res) => {
             const result = res.json();
-            console.log({ result });
+            // console.log({ result });
             return result;
         });
 
@@ -29,41 +29,42 @@ const Player = () => {
 
     }
 
-    const { status, data: query, isFetching, error } = useQuery(['639c448d01a72b59f2321459'], fetchPost, { staleTime: 60000 }, { cacheTime: 1000 * 60 * 60 }, { refetchOnWindowFocus: false }, { enabled: false }, { retry: 10 });
+    const { status, data: query, isFetching, error } = useQuery(['Kinchev_mp3'], fetchPost, { staleTime: 60000 }, { cacheTime: 1000 * 60 * 60 }, { refetchOnWindowFocus: false }, { enabled: false }, { retry: 3 });
     if (status === 'loading')
         return <>loading...</>;
 
     if (status === 'error')
         return <h1 style={{ backgroundColor: "black" }}>Ошибка загрузки {error.message}</h1>;
 
-    const songs = query.record.cavers;
+    const audioList = query.record;
+    // console.log('audioList ', audioList);
     // console.log("query.data", query)
-    const audiosongs1 = songs.map((song) => {
-        const container = {};
-        container.name = song.name;
-        container.src = song.audio1;
-        container.aud_name = song.audio_name1;
-        return container;
-    }
-    )
-    const audiosongs2 = songs.map((song) => {
-        const container = {};
-        container.name = song.name;
-        container.src = song.audio2;
-        container.aud_name = song.audio_name2;
-        return container;
-    }
-    )
-    const audiosongs3 = songs.map((song) => {
-        const container = {};
-        container.name = song.name;
-        container.src = song.audio3;
-        container.aud_name = song.audio_name3;
-        return container;
-    }
-    )
-    const audioList = [...audiosongs1, ...audiosongs2, ...audiosongs3]
-        .filter(e => e.src !== '');
+    // const audiosongs1 = songs.map((song) => {
+    //     const container = {};
+    //     container.name = song.name;
+    //     container.src = song.audio1;
+    //     container.aud_name = song.audio_name1;
+    //     return container;
+    // }
+    // )
+    // const audiosongs2 = songs.map((song) => {
+    //     const container = {};
+    //     container.name = song.name;
+    //     container.src = song.audio2;
+    //     container.aud_name = song.audio_name2;
+    //     return container;
+    // }
+    // )
+    // const audiosongs3 = songs.map((song) => {
+    //     const container = {};
+    //     container.name = song.name;
+    //     container.src = song.audio3;
+    //     container.aud_name = song.audio_name3;
+    //     return container;
+    // }
+    // )
+    // const audioList2 = [...audiosongs1, ...audiosongs2, ...audiosongs3]
+    //     .filter(e => e.src !== '');
     // console.log('audioList ', audioList);
 
     // const [loaded, setLoaded] = useState(false)

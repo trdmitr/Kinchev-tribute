@@ -15,7 +15,7 @@ const fetchPost = () => {
     }
     return fetch(url, config).then((res) => {
         const result = res.json();
-        console.log("result", result);
+        
         return result;
     });
 }
