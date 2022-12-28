@@ -22,11 +22,9 @@
     width: 60px;
     height: 5px;
     position: absolute;
-    /* позиция линии относительно .smartphone */
     top: -30px;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* выравнивание по центру */
     background: var(--tributeAfterBefore);
     border-radius: 10px;
     text-shadow: var(--backGRound);
